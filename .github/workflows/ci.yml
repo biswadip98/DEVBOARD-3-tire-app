@@ -5,6 +5,7 @@ on:
 
 jobs:
    frontend:
+        #It will runs on github runner
         runs-on: ubuntu-latest
         steps:
              - name: code checkout
@@ -18,7 +19,7 @@ jobs:
                 cache-dependency-path: 'frontend\package-lock.json'
 
              - name: install npm packages
-               run: npm run install
+               run: npm --prefix frontend/package.json install
 
              - name: Run linter
                run: npm run lint
@@ -29,13 +30,3 @@ jobs:
 
     # backend:        
          
-
-
-    
-
-
-
-    
-
-          
-
