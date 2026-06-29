@@ -39,7 +39,7 @@ jobs:
              - name: Build and push Docker image into the docker hub
                uses: docker/build-push-action@v6
                with:
-                context: .\frontend\Dockerfile
+                context: .
                 push: true
                 tags: ${{ secrets.DOCKERHUB_USERNAME }}/devboard-frontend:latest
               
