@@ -1,8 +1,18 @@
 #Deploy the built docker images. 
-name: Deploy
+name: CI-Deploy
 
 on:
-    workflow_run:
+  workflow_call:
+    # # Optional: Define inputs or secrets if your workflow expects them
+    # inputs:
+    #   config-path:
+    #     required: false
+    #     type: string
+    # secrets:
+    #   env-secret:
+    #     required: false
+
+# workflow_run:
 #   workflow_run:
 #     workflows: ["ci.yml"] # Exact name of the CI workflow YAML file
 #     types:

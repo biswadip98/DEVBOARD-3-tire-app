@@ -43,7 +43,7 @@ jobs:
                 push: true
                 tags: ${{ secrets.DOCKERHUB_USERNAME }}/devboard-frontend:latest  
                 
-                ## -----Backend----#
+                ## -----Bacend----##
    backend:
         runs-on: ubuntu-latest
         needs: frontend
@@ -51,7 +51,7 @@ jobs:
             - name: Pull the coode/ Checkout code
               uses: actions/checkout@v7
 
-            - name: set-up go 
+            - name: set-up go
               uses: actions/setup-go@v6
               with:
                 go-version : '1.23'
@@ -83,10 +83,10 @@ jobs:
                 push: true
                 tags: ${{ secrets.DOCKERHUB_USERNAME }}/devboard-backend:latest
           
-   Deploy:
-    needs: [frontend, backend]
-    uses: ./.github/workflows/cd.yml
-    secrets: inherit
+   deploy:
+        needs: [frontend,backend]
+        uses: ./.github/workflows/cd.yml
+        secrets: inherit
 
 
 
