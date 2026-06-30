@@ -21,7 +21,6 @@ on:
 
 jobs:
     Deploy:
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         runs-on: self-hosted
         steps:
             - name: Deploy the built images
