@@ -64,7 +64,7 @@ jobs:
               working-directory: backend
 
             - name: Run go formatter (Using for formatting the code, Instead of linting. - syntax check)
-              run: got fmt
+              run: go fmt
               working-directory: backend
 
             - name: Run test
