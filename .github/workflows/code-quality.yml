@@ -15,7 +15,6 @@ jobs:
             
         steps:
             
-
             - name: To checkout the code
               uses: actions/checkout@v7
               

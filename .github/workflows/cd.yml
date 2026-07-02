@@ -2,7 +2,7 @@
 name: CI-Deploy
 
 on:
-  workflow_dispatch:
+  workflow_call:
     # # Optional: Define inputs or secrets if your workflow expects them
     # inputs:
     #   config-path:
