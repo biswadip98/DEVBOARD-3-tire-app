@@ -1,7 +1,8 @@
 #To check the code quality in SAST process
 name: Code Quality
 
-on: workflow_call
+on:
+ workflow_call:
 
 jobs:
     sast:
