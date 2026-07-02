@@ -11,3 +11,6 @@ jobs:
     #code stage with shift left. Before build and deploy shift felt to check the code using secury scan. 
     code-quality:
         uses: ./.github/workflows/code-quality.yml
+
+    secret-scanning:
+        uses: ./.github/workflows/secret-scanning.yml
